@@ -1,0 +1,68 @@
+@import 'variables';
+.main{
+    font-family: $font-family;
+    background-color: $dark-blue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+.main-container{
+    background-color: $dark-grayish-blue;
+    color: $light-cyan;
+    text-align: center;
+    max-width: 450px;
+    padding: 50px;
+    border-radius: 20px;
+    
+}
+.advice-content__button{
+    max-width: fit-content;
+    background-color: $neon-green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(24px) translateX(203px);
+    transition: all .2s;
+    &:hover{
+        cursor: pointer;
+        box-shadow: 2px 1px 59px 20px rgba(82,255,168,0.76);
+
+    }
+}
+.advice-content__num{
+    color: $neon-green;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 10px 0px;
+}
+@media(max-width:550px){
+    .main-container{
+        max-width: 300px;
+    }
+    .divider-img{
+        content: url("images/pattern-divider-mobile.svg");
+    }
+    .advice-content__button{
+        transform: translateX(125px) translateY(24px);
+    }
+}
+@media(max-width:400px){
+    .main-container{
+        max-width: 200px;
+        padding: 30px;
+        
+    }
+    .divider-img{
+        width: 200px;
+    }
+    .advice-content__button{
+        transform: translateX(78px) translateY(5px);
+    }
+}
